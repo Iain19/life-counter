@@ -4,12 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node ./src/app.js"
+    "build": "SET NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
-    "dependencies": {
+  "dependencies": {
     "express": "^4.13.4",
     "react": "^0.14.8",
     "react-dom": "^0.14.8"

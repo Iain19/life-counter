@@ -1,6 +1,6 @@
 import React from 'react';
 
-const App () => {
+const App = () => {
     return (
         <h1>Hello from the Life Counter!</h1>
     );
