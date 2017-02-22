@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 
-export default class Table extends Component {
+import ActivityCounter from './ActivityCounter';
+
+export default class Activity extends Component {
     constructor(props) {
         super(props);
     }
@@ -14,13 +16,27 @@ export default class Table extends Component {
         return (
             <tr>
                 <td>{ activity }</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>
+                    <ActivityCounter count={3} />
+                </td>
+                <td>
+                    <ActivityCounter count={4} />
+                </td>
+                <td>
+                    <ActivityCounter count={2} />
+                </td>
+                <td>
+                    <ActivityCounter count={2} />
+                </td>
+                <td>
+                    <ActivityCounter count={0} />
+                </td>
+                <td>
+                    <ActivityCounter count={1} />
+                </td>
+                <td>
+                    <ActivityCounter count={3} />
+                </td>
             </tr>
         );
     }
