@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-export default class Table extends React.Component {
+import Activity from './Activity';
+
+export default class Table extends Component {
     render() {
         return (
             <table className="table table-bordered table-striped">
@@ -17,46 +19,10 @@ export default class Table extends React.Component {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Gym</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Coding</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Bowling</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Swimming</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                  <Activity activity="Gym" />
+                  <Activity activity="Coding" />
+                  <Activity activity="Bowling" />
+                  <Activity activity="Swimming" />
                 </tbody>
             </table>
         );
