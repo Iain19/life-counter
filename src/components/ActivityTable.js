@@ -8,7 +8,7 @@ export default class ActivityTable extends Component {
             <table className="activityTable table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <th>Day Of Week/Activity</th>
+                    <th>Activity / Day Of Week</th>
                     <th>Monday</th>
                     <th>Tuesday</th>
                     <th>Wednesday</th>
