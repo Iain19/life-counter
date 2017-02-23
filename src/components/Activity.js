@@ -14,8 +14,8 @@ export default class Activity extends Component {
     render() {
         const { activity } = this.props;
         return (
-            <tr>
-                <td>{ activity }</td>
+            <tr className="activity">
+                <td className="activityTitle">{ activity }</td>
                 <td>
                     <ActivityCounter count={3} />
                 </td>
