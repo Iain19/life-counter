@@ -12,7 +12,7 @@ export default class ActivityCounter extends Component {
     render() {
         const { count } = this.props;
         return (
-            <div className="btn-group">
+            <div className="btn-group activityCounter">
                 <button type="button" className="btn btn-primary">
                   -
                 </button>
