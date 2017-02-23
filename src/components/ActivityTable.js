@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import Activity from './Activity';
 
-export default class Table extends Component {
+export default class ActivityTable extends Component {
     render() {
         return (
-            <table className="table table-bordered table-striped">
+            <table className="activityTable table table-bordered table-striped">
                 <thead>
                   <tr>
                     <th>Day Of Week/Activity</th>
