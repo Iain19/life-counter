@@ -6,7 +6,7 @@ import * as Actions from '../actions/index';
 
 import ActivityTable from '../components/ActivityTable';
 
-export default class App extends Component {
+class App extends Component {
     constructor(props) {
         super(props);
     }
