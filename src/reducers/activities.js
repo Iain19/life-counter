@@ -7,7 +7,7 @@ const initialState = {
 
 export default function(state = initialState, action = {}) {
     switch (action.type) {
-        case ACTIVITY_DATA_BY_WEEK_LOAD_SUCCESS:
+        case GET_ACTIVITY_DATA_BY_WEEK:
             return {
                 ...state,
                 activitiesByWeekId: action.data,

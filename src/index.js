@@ -11,8 +11,8 @@ const createStoreWIthMiddleware = applyMiddleware()(createStore);
 const store = createStoreWIthMiddleware(reducers);
 
 ReactDOM.render(
-    <Provider store={store}>,
-        <App />,
+    <Provider store={store}>
+        <App />
     </Provider>,
     document.getElementById('main')
 );
