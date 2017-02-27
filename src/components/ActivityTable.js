@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 
 import Activity from './Activity';
 
-export default class ActivityTable extends Component {
+class ActivityTable extends Component {
     render() {
         return (
             <table className="activityTable table table-bordered table-striped">
@@ -28,3 +29,9 @@ export default class ActivityTable extends Component {
         );
     }
 };
+
+function mapStateToProps(state) {
+
+}
+
+export default connect(mapStateToProps)(ActivityTable);

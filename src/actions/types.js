@@ -1,0 +1,1 @@
+export const ACTIVITY_DATA_BY_WEEK_LOAD_SUCCESS = 'activity_data_by_week_load_success';
