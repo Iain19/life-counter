@@ -10,7 +10,7 @@ export default function(state = initialState, action = {}) {
         case GET_ACTIVITY_DATA_BY_WEEK:
             return {
                 ...state,
-                activitiesByWeekId: action.data,
+                activitiesByWeekId: { ...state.activitiesByWeekId, ...action.data},
                 activitiesIdList: action.activitiesIdList
             };
         default:

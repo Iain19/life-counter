@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import Activity from './Activity';
 
-class ActivityTable extends Component {
+export default class ActivityTable extends Component {
     render() {
         return (
             <table className="activityTable table table-bordered table-striped">
@@ -29,9 +29,3 @@ class ActivityTable extends Component {
         );
     }
 };
-
-function mapStateToProps(state) {
-  return {};
-}
-
-export default connect(mapStateToProps)(ActivityTable);
