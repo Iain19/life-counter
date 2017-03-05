@@ -8,4 +8,4 @@ export function getWeekIdByDate(date) {
 
 export function getCurrentWeekId() {
     return getWeekIdByDate(new Date());
-}
+};

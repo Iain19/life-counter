@@ -8,35 +8,23 @@ export default class Activity extends Component {
     }
 
     static propTypes = {
-        activity: PropTypes.string.isRequired
+        activityName: PropTypes.string.isRequired,
+        activityAmount: PropTypes.object.isRequired
     }
 
     render() {
-        const { activity } = this.props;
+        const { activityName, activityAmount } = this.props;
         return (
             <tr className="activity">
-                <td className="activityTitle">{ activity }</td>
-                <td>
-                    <ActivityCounter count={3} />
-                </td>
-                <td>
-                    <ActivityCounter count={4} />
-                </td>
-                <td>
-                    <ActivityCounter count={2} />
-                </td>
-                <td>
-                    <ActivityCounter count={2} />
-                </td>
-                <td>
-                    <ActivityCounter count={0} />
-                </td>
-                <td>
-                    <ActivityCounter count={1} />
-                </td>
-                <td>
-                    <ActivityCounter count={3} />
-                </td>
+                <td className="activityTitle">{ activityName }</td>
+                {activityAmount &&
+                 Object.keys(activityAmount).map(key =>
+                    <td key={key}>
+                        <ActivityCounter
+                          count={activityAmount[key]}
+                        />
+                    </td>
+                )}
             </tr>
         );
     }

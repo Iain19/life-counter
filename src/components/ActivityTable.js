@@ -1,29 +1,31 @@
-import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import React, { Component, PropTypes } from 'react';
 
 import Activity from './Activity';
+import ActivityTableHead from './ActivityTableHead';
+import { getCurrentWeekId } from '../utils/dateUtils';
 
 export default class ActivityTable extends Component {
+    constructor(props) {
+      super(props);
+    }
+
     render() {
+        const { activityKeys, activityData } = this.props;
+        const currentWeekId = getCurrentWeekId();
         return (
             <table className="activityTable table table-bordered table-striped">
                 <thead>
-                  <tr>
-                    <th>Activity / Day Of Week</th>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                    <th>Saturday</th>
-                    <th>Sunday</th>
-                  </tr>
+                    <ActivityTableHead />
                 </thead>
                 <tbody>
-                  <Activity activity="Gym" />
-                  <Activity activity="Coding" />
-                  <Activity activity="Bowling" />
-                  <Activity activity="Swimming" />
+                {activityKeys &&
+                 activityKeys.map(key =>
+                    <Activity
+                      key={key}
+                      activityName={activityData[key].name}
+                      activityAmount={activityData[key].amount[currentWeekId]}
+                    />
+                )}
                 </tbody>
             </table>
         );

@@ -20,8 +20,10 @@ class App extends Component {
         return (
             <div className="container">
                 <h2>Hello from the Life Counter!</h2>
-                <h2>{this.props.activityData && Object.keys(this.props.activityData)}</h2>
-                <ActivityTable />
+                <ActivityTable
+                    activityData={this.props.activityData}
+                    activityKeys={this.props.activityData && Object.keys(this.props.activityData)}
+                />
             </div>
         );
     }
