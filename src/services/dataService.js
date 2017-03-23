@@ -2,11 +2,27 @@ export function fetchActivityDataByWeekId(weekId) {
     return {
         '123': {
             name: 'Gym',
-            amount: [0 , 1, 0, 3 , 1, 0, 1]
+            valueByDayId: {
+                '17251': 0,
+                '17252': 1,
+                '17253': 0,
+                '17254': 3,
+                '17255': 1,
+                '17256': 0,
+                '17257': 1
+            }
         },
         '321': {
             name: 'English',
-            amount: [1, 0, 2, 1, 2, 0, 1]
+            valueByDayId: {
+                '17251': 0,
+                '17252': 1,
+                '17253': 0,
+                '17254': 3,
+                '17255': 1,
+                '17256': 0,
+                '17257': 1
+            }
         }
     };
 };

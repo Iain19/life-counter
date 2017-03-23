@@ -1,7 +1,7 @@
 import { GET_ACTIVITY_DATA_BY_WEEK } from '../actions/types';
 
 const initialState = {
-    activitiesByWeekId: {},
+    activitiesById: {},
     activitiesIdList: []
 };
 
@@ -10,7 +10,7 @@ export default function(state = initialState, action = {}) {
         case GET_ACTIVITY_DATA_BY_WEEK:
             return {
                 ...state,
-                activitiesByWeekId: { ...state.activitiesByWeekId, ...action.data},
+                activitiesById: { ...state.activitiesById, ...action.data},
                 activitiesIdList: action.activitiesIdList
             };
         default:
